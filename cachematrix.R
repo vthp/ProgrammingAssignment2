@@ -32,7 +32,8 @@ list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
 ## defining environment.
 ## If result is returned from the cache
 ## then this is noted in a messsage.
-## Else, the message is returned.
+## Else, the result is returned and cached
+## for use later without the computation.
 
 cacheSolve <- function(x=matrix(), ...) {
   m<-x$getinverse()
